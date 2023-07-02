@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Pascal triangle"""
 
+
 def pascal_triangle(n):
     """Returns a list of lists of integers 
     representing the Pascal’s triangle of n:
@@ -8,6 +9,7 @@ def pascal_triangle(n):
 
     if n <= 0:
         return []
+
     
     """ initialize an empty resulting array """
     pascal = [[] for idx in range(n)]
