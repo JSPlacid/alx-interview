@@ -1,3 +1,7 @@
+#!/usr/bin/python3
+"""lock boxes"""
+
+
 def canUnlockAll(boxes):
     n = len(boxes)
     unlocked = [False] * n
