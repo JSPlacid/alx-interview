@@ -19,12 +19,15 @@ def minOperations(n):
     if n <= 1:
         return min_operations
 
-    for i in range(2, n + 1):
-        while n % i == 0:
-            min_operations += i
-            n /= i
+    ops = [float('inf')] * (n+1)
+    ops[1] = 0
 
-    return min_operations
+    for i in range(2, n + 1):
+        for j in range(1, i):
+            if i % j == 0:
+                ops[i] = min(ops[i], ops[j] + (i // j))
+
+    return ops[n] if ops[n] != float('inf') else 0
 
 
 if __name__ == '__main__':
