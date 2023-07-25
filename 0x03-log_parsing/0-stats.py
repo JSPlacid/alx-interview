@@ -1,5 +1,8 @@
+#!/usr/bin/python3
+```A script to parse http logs```
 import sys
 from collections import defaultdict
+
 
 def print_metrics(total_size, status_codes):
     print(f"Total file size: File size: {total_size}")
